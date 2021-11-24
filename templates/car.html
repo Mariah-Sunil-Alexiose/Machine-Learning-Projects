@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Car Price Predictor</h3>
+<br>
+<p class="px-3">Car Price Predictor uses a Linear and Lasso Regression Model for prediction. This is the <a href="https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=car+data.csv" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3"> 
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Year" name="year" id="year">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Present Price(in Lakhs)" name="present_price" id="present_price" step="0.01">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="KMS Driven" name="kms_driven" id="kms_driven">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="fuel_type" id="fuel_type">
+                <option selected disabled>Fuel Type</option>
+                <option value="1">Petrol</option>
+                <option value="2">Diesel</option>
+                <option value="3">CNG</option>
+            </select>
+        </div>  
+        <div class="col">
+            <select class="form-select" name="seller_type" id="seller_type">
+                <option selected disabled>Seller Type</option>
+                <option value="1">Dealer</option>
+                <option value="2">Individual</option>
+            </select>
+        </div>
+        <div class="col">
+            <select class="form-select" name="transmission" id="transmission">
+                <option selected disabled>Transmission</option>
+                <option value="1">Manual</option>
+                <option value="2">Automatic</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Owner" name="owner" id="owner" min="0" max="3">
+        </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

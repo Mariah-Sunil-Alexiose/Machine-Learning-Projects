@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Wine Quality Predictor</h3>
+<br>
+<p class="px-3">Wine Quality Predictor uses a Random Forest model for prediction. This is the <a href="https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3">
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Fixed Acidity" name="fixed_acidity" id="fixed_acidity" step="0.001">
+            <button class="input_button">Ok</button>
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Volatile Acidity" name="volatile_acidity" id="volatile_acidity" step="0.001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Citric Acid" name="citric_acid" id="citric_acid" step="0.001">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Residual Sugar" name="residual_sugar" id="residual_sugar" step="0.001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Chorides" name="chorides" id="chorides" step="0.001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Free Sulfur Dioxide" name="free_sulfur_dioxide" id="free_sulfur_dioxide" step="0.001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Total Sulfur Dioxide" name="total_sulfur_dioxide" id="total_sulfur_dioxide" step="0.001">
+        </div>
+    </div>  
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Density" name="density" id="density" step="0.000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="pH" name="ph" id="ph" step="0.001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Sulphates" name="sulphates" id="sulphates" step="0.001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Alcohol" name="alcohol" id="alcohol" step="0.001">
+        </div>
+    </div> 
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

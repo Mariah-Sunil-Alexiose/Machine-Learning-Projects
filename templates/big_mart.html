@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Big Mart Sales Predictor</h3>
+<br>
+<p class="px-3">Big Mart Sales Predictor uses a XGBRegressor model for prediction. This is the <a href="https://www.kaggle.com/sonalsaxena/diabeties-dataset/data" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3">
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Item Identifier" name="item_identifier" id="item_identifier" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Item Weight" name="item_weight" id="item_weight" min="0" step="0.000001">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="item_fat_content" id="item_fat_content">
+                <option selected disabled>Item Fat Content</option>
+                <option value="0">Low Fat</option>
+                <option value="1">Regular</option>
+            </select>
+        </div>  
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Item Visibility" name="item_visibility" id="item_visibility" min="0" step="0.000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="item_type" id="item_type">
+                <option selected disabled>Item Type</option>
+                <option value="0">Baking Goods</option>
+                <option value="1">Breads</option>
+                <option value="2">Breakfast</option>
+                <option value="3">Canned</option>
+                <option value="4">Dairy</option>
+                <option value="5">Frozen Foods</option>
+                <option value="6">Fruits and Vegetables</option>
+                <option value="7">Hard Drinks</option>
+                <option value="8">Health and Hygiene</option>
+                <option value="9">Household</option>
+                <option value="10">Meat</option>
+                <option value="11">Others</option>
+                <option value="12">Seafood</option>
+                <option value="13">Snack Foods</option>
+                <option value="14">Soft Drinks</option>
+                <option value="15">Starchy Foods</option>
+            </select>
+        </div> 
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Item MRP" name="item_mrp" id="item_mrp" step="0.0000001" min="0">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Outlet Identifier" name="outlet_identifier" id="outlet_identifier">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Outlet Establishment Year" name="outlet_establishment_year" id="outlet_establishment_year">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="outlet_size" id="outlet_size">
+                <option selected disabled>Outlet Size</option>
+                <option value="0">High</option>
+                <option value="1">Medium</option>
+                <option value="2">Small</option>
+            </select>
+        </div> 
+        <div class="col">
+            <select class="form-select" name="outlet_location_type" id="outlet_location_type">
+                <option selected disabled>Outlet Location Type</option>
+                <option value="0">Tier 1</option>
+                <option value="1">Tier 2</option>
+                <option value="2">Tier 3</option>
+            </select>
+        </div>  
+        <div class="col">
+            <select class="form-select" name="outlet_type" id="outlet_type">
+                <option selected disabled>Outlet Type</option>
+                <option value="0">Grocery Store </option>
+                <option value="1">Supermarket Type 1</option>
+                <option value="2">Supermarket Type 2</option>
+                <option value="3">Supermarket Type 3</option>
+            </select>
+        </div>  
+    </div> 
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

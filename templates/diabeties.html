@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Diabeties Detector</h3>
+<br>
+<p class="px-3">Diabeties Detector uses a Support Vector Machine model for prediction. This is the <a href="https://www.kaggle.com/sonalsaxena/diabeties-dataset/data" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3">
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Pregnancies" name="pregnancies" id="pregnancies" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Glucose" name="glucose" id="glucose" min="0">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Blood Pressure" name="blood_pressure" id="blood_pressure" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Skin Thickness" name="skin_thickness" id="skin_thickness" min="0">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Insulin" name="insulin" id="insulin" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="BMI" name="bmi" id="bmi" step="0.001" min="0">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Pedigree Function" name="pedigree_function" id="pedigree_function" step="0.000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Age" name="age" id="age">
+        </div>
+    </div> 
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

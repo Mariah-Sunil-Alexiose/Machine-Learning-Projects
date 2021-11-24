@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Movie Recommender</h3>
+<br>
+<p class="px-3">Movie Recommender uses a Cosine Similarity Algorithm for prediction. This is the <a href="https://drive.google.com/file/d/1cCkwiVv4mgfl20ntgY3n4yApcWqqZQe6/view" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+    <div class="px-3 row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Movie" name="movie" id="movie">
+        </div>
+    </div>
+    <br>
+    <div class="px-3 mx-auto">    
+        <button type="submit" class="btn btn-primary">Recommend</button>
+    </div>
+    </form>
+{% endblock %}

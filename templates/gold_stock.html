@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Gold Stock Predictor</h3>
+<br>
+<p class="px-3">Gold Stock Predictor uses a Linear Regression model for prediction.</p>
+<br>
+<form method="POST" class="px-3"> 
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Open" name="Open" id="Open">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="High"name="High" id="High">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+        <input type="text" class="form-control" placeholder="Low" name="Low" id="Low">
+        </div>
+        <div class="col">
+        <input type="text" class="form-control" placeholder="Volume" name="Volume" id="Volume">
+        </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+{% endblock %}

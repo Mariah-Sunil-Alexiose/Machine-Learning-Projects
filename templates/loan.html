@@ -1,0 +1,90 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Loan Status Predictor</h3>
+<br>
+<p class="px-3">Loan Status Predictor predicts whether the loan is approved or rejected. It uses a Support Vector Machine model for prediction. This is the <a href="https://www.kaggle.com/ninzaami/loan-predication" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3">
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="gender" id="gender">
+                <option selected disabled>Gender</option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+        </div>  
+        <div class="col">
+            <select class="form-select" name="married" id="married">
+                <option selected disabled>Married</option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>  
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="dependants" id="dependants">
+                <option selected disabled>Dependants</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+            </select>
+        </div>  
+        <div class="col">
+            <select class="form-select" name="education" id="education">
+                <option selected disabled>Education</option>
+                <option value="0">Not Graduate</option>
+                <option value="1">Graduate</option>
+            </select>
+        </div> 
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="self_employed" id="self_employed">
+                <option selected disabled>Self Employed</option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>  
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Applicant Income" name="applicant_income" id="applicant_income" step="0.001" min="0">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Coapplicant Income" name="coapplicant_income" id="coapplicant_income" step="0.000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Loan Amount" name="loan_amount" id="loan_amount">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Loan Amount Term" name="loan_amount_term" id="loan_amount_term">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="credit_history" id="credit_history">
+                <option selected disabled>Credit History</option>
+                <option value="0.0">0.0</option>
+                <option value="1.0">1.0</option>
+            </select>
+        </div>  
+        <div class="col">
+            <select class="form-select" name="property_area" id="property_area">
+                <option selected disabled>Property Area</option>
+                <option value="0">Rural</option>
+                <option value="1">Semiurban</option>
+                <option value="1">Urban</option>
+            </select>
+        </div>  
+    </div> 
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

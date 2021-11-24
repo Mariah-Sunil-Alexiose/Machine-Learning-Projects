@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Gold Price Predictor</h3>
+<br>
+<p class="px-3">Gold Price Predictor uses a Random Forest Regressor for prediction. This is the <a href="https://www.kaggle.com/altruistdelhite04/gold-price-data" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3"> 
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="SPX" name="spx" id="spx">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="USO" name="uso" id="uso">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+        <input type="text" class="form-control" placeholder="SLV" name="slv" id="slv">
+        </div>
+        <div class="col">
+        <input type="text" class="form-control" placeholder="EUR/USD" name="eur_usd" id="eur_usd">
+        </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

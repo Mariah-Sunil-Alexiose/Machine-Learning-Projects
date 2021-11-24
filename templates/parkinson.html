@@ -1,0 +1,109 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Parkinson's Disease Detector</h3>
+<br>
+<p class="px-3">Parkinson's Disease Detector uses a Support Vector Machine model for prediction. This is the <a href="https://www.kaggle.com/nidaguler/parkinsons-data-set" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3">
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="MDVP:Fo(Hz)*" name="fo" id="fo" step="0.0001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="MDVP:Fhi(Hz)*" name="fhi" id="fhi" step="0.0001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="MDVP:Flo(Hz)*" name="flo" id="flo" step="0.0001" min="0">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="MDVP:Jitter(%)*" name="jitter_percent" id="jitter_percent" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="MDVP:Jitter(Abs)*" name="jitter_abs" id="jitter_abs" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="MDVP:RAP*" name="rap" id="rap" step="0.0000001" min="0">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="MDVP:PPQ*" name="ppq" id="ppq" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Jitter:DDP*" name="jitter_ddp" id="jitter_ddp" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="MDVP:Shimmer*" name="shimmer" id="shimmer" step="0.0000001" min="0">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="MDVP:Shimmer(dB)*" name="shimmer_db" id="shimmer_db" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Shimmer:APQ3*" name="apq3" id="apq3" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Shimmer:APQ5*" name="apq5" id="apq5" step="0.0000001" min="0">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="MDVP:APQ*" name="apq" id="apq" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Shimmer:DDA*" name="dda" id="dda" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="NHR*" name="nhr" id="nhr" step="0.0000001" min="0">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="HNR*" name="hnr" id="hnr" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="RPDE*" name="rpde" id="rpde" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="DFA*" name="dfa" id="dfa" step="0.0000001" min="0">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Spread1*" name="spread1" id="spread1" step="0.0000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Spread2*" name="spread2" id="spread2" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="D2*" name="d2" id="d2" step="0.0000001" min="0">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="PPE*" name="ppe" id="ppe" step="0.0000001" min="0">
+        </div>
+    </div> 
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+<br>
+<p>*MDVP:Fo(Hz) - Average vocal fundamental frequency</p>
+<p>*MDVP:Fhi(Hz) - Maximum vocal fundamental frequency</p>
+<p>*MDVP:Flo(Hz) - Minimum vocal fundamental frequency</p>
+<p>*MDVP:Jitter(%), MDVP:Jitter(Abs), MDVP:RAP, MDVP:PPQ, Jitter:DDP - Several measures of variation in fundamental frequency</p>
+<p>*MDVP:Shimmer, MDVP:Shimmer(dB), Shimmer:APQ3, Shimmer:APQ5, MDVP:APQ, Shimmer:DDA - Several measures of variation in amplitude</p>
+<p>*NHR, HNR - Two measures of ratio of noise to tonal components in the voice</p>
+<p>*RPDE, D2 - Two nonlinear dynamical complexity measures</p>
+<p>*DFA - Signal fractal scaling exponent</p>
+<p>*Spread1, Spread2, PPE - Three nonlinear measures of fundamental frequency variation</p>
+
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Credit Card Fraud Detector</h3>
+<br>
+<p class="px-3">Credit Card Fraud Detector uses a Logistic Regression model for prediction. This is the <a href="https://www.kaggle.com/altruistdelhite04/gold-price-data" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3"> 
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V1" name="v1" id="v1" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V2" name="v2" id="v2" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V3" name="v3" id="v3" step="0.0000000000000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V4" name="v4" id="v4" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V5" name="v5" id="v5" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V6" name="v6" id="v6" step="0.0000000000000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V7" name="v7" id="v7" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V8" name="v8" id="v8" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V9" name="v9" id="v9" step="0.0000000000000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V10" name="v10" id="v10" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V11" name="v11" id="v11" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V12" name="v12" id="v12" step="0.0000000000000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V13" name="v13" id="v13" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V14" name="v14" id="v14" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V15" name="v15" id="v15" step="0.0000000000000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V16" name="v16" id="v16" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V17" name="v17" id="v17" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V18" name="v18" id="v18" step="0.0000000000000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V19" name="v19" id="v19" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V20" name="v20" id="v20" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V21" name="v21" id="v21" step="0.0000000000000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V22" name="v22" id="v22" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V23" name="v23" id="v23" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V24" name="v24" id="v24" step="0.0000000000000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V25" name="v25" id="v25" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V26" name="v26" id="v26" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V27" name="v27" id="v27" step="0.0000000000000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="V28" name="v28" id="v28" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Amount" name="amount" id="amount" step="0.0000000000000001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Time" name="time" id="time" step="0.01">
+        </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+<br>
+{% endblock %}

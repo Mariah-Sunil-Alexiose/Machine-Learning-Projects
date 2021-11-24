@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Titanic Survival Predictor</h3>
+<br>
+<p class="px-3">Titanic Survival Predictor uses a Logistic Regression model for prediction. This is the <a href="https://www.kaggle.com/c/titanic/data?select=train.csv" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3"> 
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="pclass" id="pclass">
+                <option selected disabled>Ticket Class</option>
+                <option value="1">Upper</option>
+                <option value="2">Middle</option>
+                <option value="3">Lower</option>
+            </select>
+        </div>  
+        <div class="col">
+            <select class="form-select" name="sex" id="sex">
+                <option selected disabled>Sex</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+        </div>  
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Age" name="age" id="age" step="0.001">
+        </div>
+    </div>
+    <br>
+    
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="sibsp" id="sibsp">
+                <option selected disabled>Number of siblings/spouses aboard</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+        </div> 
+        <div class="col">
+            <select class="form-select" name="parch" id="parch">
+                <option selected disabled>Number of parents/children aboard</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div> 
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Fare" name="fare" id="fare" step="0.001">
+        </div>
+        <div class="col">
+            <select class="form-select" name="embarked" id="embarked">
+                <option selected disabled>Port of Embarkation</option>
+                <option value="0">Southampton</option>
+                <option value="1">Cherbourg</option>
+                <option value="2">Queenstown</option>
+            </select>
+        </div>  
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

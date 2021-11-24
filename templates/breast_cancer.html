@@ -1,0 +1,119 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Breast Cancer Detector</h3>
+<br>
+<p class="px-3">Breast Cancer Detector detects whether the breast cancer is Malignant or Benign. It uses a Logistic Regression model for prediction. This is the <a href="https://www.kaggle.com/uciml/breast-cancer-wisconsin-data" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3">
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Mean Radius" name="radius_mean" id="radius_mean" min="5" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Mean Texture" name="texture_mean" id="texture_mean" min="9" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Mean Perimeter" name="perimeter_mean" id="perimeter_mean" min="41" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Mean Area" name="area_mean" id="area_mean" min="140" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Mean Smoothness" name="smoothness_mean" id="smoothness_mean" min="0" step="0.00001">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Mean Compactness" name="compactness_mean" id="compactness_mean" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Mean Concavity" name="concavity_mean" id="concavity_mean" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Mean Concave Points" name="concavep_mean" id="concavep_mean" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Mean Symmetry" name="symmetry_mean" id="symmetry_mean" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Mean Fractional Dimension" name="fractionald_mean" id="fractionald_mean" min="0" step="0.00001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Standard Error of Radius" name="radius_se" id="radius_se" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Standard Error of Texture" name="texture_se" id="texture_se" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Standard Error of Perimeter" name="perimeter_se" id="perimeter_se" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Standard Error of Area" name="area_se" id="area_se" min="5" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Standard Error of Smoothness" name="smoothness_se" id="smoothness_se" min="0" step="0.000001">
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Standard Error of Compactness" name="compactness_se" id="compactness_se" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Standard Error of Concavity" name="concavity_se" id="concavity_se" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Standard Error of Concave Points" name="concavep_se" id="concavep_se" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Standard Error of Symmetry" name="symmetry_se" id="symmetry_se" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Standard Error of Fractional Dimension" name="fractionald_se" id="fractionald_se" min="0" step="0.000001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Worst Mean of Radius" name="radius_worst" id="radius_worst" min="7" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Worst Mean of Texture" name="texture_worst" id="texture_worst" min="10" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Worst Mean of Perimeter" name="perimeter_worst" id="perimeter_worst" min="50" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Worst Mean of Area" name="area_worst" id="area_worst" min="180" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Worst Mean of Smoothness" name="smoothness_worst" id="smoothness_worst" min="0" step="0.00001">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Worst Mean of Compactness" name="compactness_worst" id="compactness_worst" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Worst Mean of Concavity" name="concavity_worst" id="concavity_worst" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Worst Mean of Concave Points" name="concavep_worst" id="concavep_worst" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Worst Mean of Symmetry" name="symmetry_worst" id="symmetry_worst" min="0" step="0.00001">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Worst Mean of Fractional Dimension" name="fractionald_worst" id="fractionald_worst" min="0" step="0.00001">
+        </div>
+    </div> 
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Heart Disease Detector</h3>
+<br>
+<p class="px-3">Heart Disease Detector uses a Logistic Regression model for prediction. This is the <a href="https://www.kaggle.com/ronitf/heart-disease-uci" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3">
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Age" name="age" id="age" min="20">
+        </div>
+        <div class="col">
+            <select class="form-select" name="sex" id="sex">
+                <option selected disabled>Gender</option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+        </div>  
+        <div class="col">
+            <select class="form-select" name="cp" id="cp">
+                <option selected disabled>Chest Pain Type</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Resting Blood Pressure (in mmHg on admission)" name="trestbps" id="trestbps">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Serum Cholestoral (mg/dl)" name="chol" id="chol" min="100">
+        </div>
+        <div class="col">
+            <select class="form-select" name="fbs" id="fbs">
+                <option selected disabled>Fasting Blood Sugar (120 mg/dl)</option>
+                <option value="0">False</option>
+                <option value="1">True</option>
+            </select>
+        </div>  
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="restecg" id="restecg">
+                <option selected disabled>Resting Electrocardiographic Results</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div> 
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Max Heart Rate Achieved" name="thalach" id="thalach" min="70">
+        </div>
+        <div class="col">
+            <select class="form-select" name="exang" id="exang">
+                <option selected disabled>Exercise Induced Angina</option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div> 
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Old Peak" name="oldpeak" id="oldpeak" min="0" step="0.001">
+        </div>
+        <div class="col">
+            <select class="form-select" name="slope" id="slope">
+                <option selected disabled>Slope of Peak Exercise ST Segment</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div> 
+        <div class="col">
+            <select class="form-select" name="ca" id="ca">
+                <option selected disabled>Number of Major Vessels colored by Flourosopy</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div> 
+        <div class="col">
+            <select class="form-select" name="thal" id="thal">
+                <option selected disabled>Thal</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

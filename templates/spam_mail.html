@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Spam Mail Detector</h3>
+<br>
+<p class="px-3">Spam Mail Detector predicts whether the given mail is spam or ham. It uses a Logistic Regression model for prediction. This is the <a href="https://www.kaggle.com/mfaisalqureshi/spam-email" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3">
+    <div class="form-outline">
+        <textarea class="form-control" type="text" placeholder="Enter the email" name="mail" id="mail" rows="4" ></textarea>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

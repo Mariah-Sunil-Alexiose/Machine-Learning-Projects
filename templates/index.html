@@ -1,0 +1,196 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="imagecontainer">
+    <div class="content">
+      <a href="{{ url_for('gold_price') }}">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{{ url_for('static', filename='img/gold.jpg') }}">
+        <div class="content-details fadeIn-bottom">
+          <h3 class="content-title">Gold Price Predictor</h3>
+        </div>
+      </a>
+    </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('gold_stock') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/stock.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Gold Stock Predictor</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('movie_recommender') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/movies.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Movie Recommender</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('car') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/car.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Car Price Predictor</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('credit_card') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/credit_card.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Credit Card Fraud Detection</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('heart') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/heart.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Heart Disease Predictor</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('titanic') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/titanic.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Titanic Survival Predictor</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('wine') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/wine.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Wine Quality Predictor</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('diabeties') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/diabeties.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Diabeties Detector</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('parkinson') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/parkinson.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Parkinson's Disease Detector</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('spam_mail') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/spam_mail.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Spam Mail Detector</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('loan') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/loan.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Loan Status Predictor</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('fake_news') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/fake_news.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Fake News Predictor</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('breast_cancer') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/breast_cancer.png') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Breast_Cancer Detector</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('medical_insurance') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/medical_insurance.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Medical Insurance Cost Predictor</h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="imagecontainer">
+  <div class="content">
+    <a href="{{ url_for('sonar') }}">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{{ url_for('static', filename='img/sonar.jpg') }}">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Sonar Rock vs Mine Detector</h3>
+      </div>
+    </a>
+  </div>
+</div>
+{% endblock %}

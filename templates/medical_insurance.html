@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<h3 class="text-center">Medical Insurance Cost Predictor</h3>
+<br>
+<p class="px-3">Medical Insurance Cost Predictor uses a Linear Regression model for prediction. This is the <a href="https://www.kaggle.com/mirichoi0218/insurance" class="link-primary">dataset</a> that I have used to implement this predictor.</p>
+<br>
+<form method="POST" class="px-3"> 
+    <div class="row">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Age" name="age" id="age" min="0">
+        </div>
+        <div class="col">
+            <select class="form-select" name="sex" id="sex">
+                <option selected disabled>Gender</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+        </div>  
+        <div class="col">
+            <input type="number" class="form-control" placeholder="BMI" name="bmi" id="bmi" min="15" step="0.0001">
+        </div>
+    </div>
+    <br>
+    
+    <div class="row">
+        <div class="col">
+            <select class="form-select" name="children" id="children">
+                <option selected disabled>Number of children/dependants</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div> 
+        <div class="col">
+            <select class="form-select" name="smoker" id="smoker">
+                <option selected disabled>Smoker</option>
+                <option value="0">Yes</option>
+                <option value="1">No</option>
+            </select>
+        </div> 
+        <div class="col">
+            <select class="form-select" name="region" id="region">
+                <option selected disabled>Region</option>
+                <option value="0">South East</option>
+                <option value="1">South West</option>
+                <option value="2">North East</option>
+                <option value="3">North West</option>
+            </select>
+        </div>  
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}
